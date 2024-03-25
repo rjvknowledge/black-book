@@ -1,0 +1,14 @@
+
+from openpyxl.workbook import workbook
+from openpyxl import load_workbook
+import random
+
+
+wb = load_workbook("C:\\Users\\rajee\\OneDrive\\Documents\\excel sheet\\Option Trading Data.xlsx")
+ws = wb.active
+row_no = random.randint(1,7)
+print(row_no)
+
+word = ws[row_no]
+for cell in word:
+    print(cell.value)
